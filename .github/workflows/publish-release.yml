@@ -21,10 +21,10 @@ jobs:
         uses: gradle/gradle-build-action@v2
         with:
           gradle-version: current
-          arguments: build
+          arguments: jar
           
       - name: Upload
         uses: actions/upload-artifact@v3
         with:
           name: bukkit
-          path: /*
+          path: build/*
